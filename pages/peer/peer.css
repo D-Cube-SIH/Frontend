@@ -63,14 +63,15 @@ body {
 
 .input-holder{
     position: absolute;
-    bottom: 20px;
+    bottom: 70px;
     width: 100vw;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .input-holder .input-box{
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -86,7 +87,7 @@ body {
     height: 40px;
     border-radius: 20px;
     border: none;
-    padding: 0 1rem;
+    padding: 0 2rem 0 1rem;
     font-size: 16px;
     outline: none;
     margin-left: 10px;
@@ -94,8 +95,14 @@ body {
 
 .input-holder .input-box button{
     position: absolute;
-    right: 50px;
+    right: 10px;
+    top: 1px;
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.input-holder .input-box button img{
+    width: 35px;
+    height: 40px;
 }
