@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="./../../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./signup.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sigin</title>
+        <link rel="shortcut icon" href="./../../assets/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./signup.css">
+    </head>
 
-<body>
-    <div class="container">
-        <h2>Sign Up</h2>
-        <form action="./index.html" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+    <body>
+        <div class="container">
+            <h2>Sign Up</h2>
+            <form id="form-element" action="/user" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-            <button type="submit">Sign Up</button>
-    </div>
+                <button id="signup-btn" type="submit">Sign Up</button>
+        </div>
 
-</body>
+        <script>
+            const formElement = document.getElementById('form-element');
+            formElement.addEventListener('submit', () => {
+                var userNameInput = document.getElementById('username').value;
+                var emailInput = document.getElementById('email').value;
+                var passwordInput = document.getElementById('password').value;
+                const userCrediential = {username:userNameInput , email:emailInput , password:passwordInput};
+                var res = fetch('http://localhost:8080/user' , {
+                    method:'POST',
+                    body: JSON.stringify(userCrediential),
+                    headers:'application/json'
+                });
+            });
+
+        </script>
+    </body>
 
 </html>
