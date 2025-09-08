@@ -6,9 +6,10 @@ const continueBtn = document.querySelector('.continue-btn')
 const qSection = document.querySelector('.questions-section')
 const options = document.querySelectorAll('.option');
 const resultBox = document.querySelector('.result-box');
+const resultText = document.querySelector('.results');
 
 class Answers {
-    constructor(){
+    constructor() {
         this.val = [];
         this.temp = 0;
         this.resultRespose = []
@@ -19,16 +20,16 @@ class Answers {
     addValue(value) {
         this.temp = value;
     }
-    showAnswers(){
+    showAnswers() {
         return this.val;
     }
 }
 
 options.forEach(option => {
-  option.addEventListener('click', () => {
-    options.forEach(o => o.classList.remove('active')); // remove previous
-    option.classList.add('active'); // highlight current
-  });
+    option.addEventListener('click', () => {
+        options.forEach(o => o.classList.remove('active')); // remove previous
+        option.classList.add('active'); // highlight current
+    });
 });
 
 startBtn.onclick = () => {
@@ -49,13 +50,13 @@ continueBtn.onclick = () => {
     showQuestions(0);
 }
 
-function showQuestions(index){
+function showQuestions(index) {
     const questionText = document.querySelector('.question-text');
     questionText.textContent = `${questions[index].numb}. ${questions[index].question}`;
 
     const option = document.querySelectorAll('.option');
-    for(let i = 0; i < option.length; i++){
-        option[i].setAttribute('onClick','optionSelected(this)');
+    for (let i = 0; i < option.length; i++) {
+        option[i].setAttribute('onClick', 'optionSelected(this)');
     }
 }
 
@@ -63,7 +64,7 @@ function showQuestions(index){
 
 
 
-function optionSelected(answer){
+function optionSelected(answer) {
     let userAnswer = answer.textContent;
     ans.temp = userAnswer
 }
@@ -75,37 +76,54 @@ let questionNumb = 1;
 const nextBtn = document.querySelector('.next-btn');
 const ans = new Answers();
 
-nextBtn.addEventListener('click' , () => {
+nextBtn.addEventListener('click', () => {
     ans.addAnswers(ans.temp.replace(/\n/g, "").trim());
     ans.temp = 0
     console.table(ans.showAnswers())
 })
 
 nextBtn.onclick = () => {
-    if(questionCount < questions.length - 1){
+    if (questionCount < questions.length - 1) {
         questionCount++;
         questionNumb++;
         showQuestions(questionCount);
         questionCounter(questionNumb);
         options.forEach(o => o.classList.remove('active'));
     }
-    else{
+    else {
         resultBox.classList.add('active');
         console.log("Questions over!");
-        ans.resultRespose = questions.map((items , index) => {
-            let temp = {...items}
+        ans.resultRespose = questions.map((items, index) => {
+            let temp = { ...items }
             temp.optionSelected = ans.val[index];
             delete temp.options;
             delete temp.numb;
             return temp;
         });
         console.table(ans.resultRespose);
-        
+        const response = fetch("http://localhost:8080/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer EMPTY"
+            },
+            body: JSON.stringify({
+                model: "CBT-Copilot",
+                messages: [
+                    { role: "system", content: "You are a compassionate CBT therapist." },
+                    { role: "user", content: this.resultRespose }
+                ]
+            })
+        })
+        .then(res => res.json())
+        .then(res => {
+            resultText.textContent = res;
+        });
     }
 }
 
 
-function questionCounter(index){
+function questionCounter(index) {
     const questionTotal = document.querySelector('.total-questions');
     questionTotal.textContent = `${index}/10 Questions`;
 }
