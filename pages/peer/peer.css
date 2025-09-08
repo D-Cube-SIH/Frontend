@@ -119,7 +119,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translate(-100%);
+    transition: all 1s ease-in-out;
 }
+
+.aside-bar .close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #000;
+    border: none;
+    cursor: pointer;
+}
+
 
 .aside-bar .options{
     width: 90%;
@@ -128,7 +140,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 10px;   
     padding-right: 10px;
 
 }
