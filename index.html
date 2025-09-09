@@ -3,10 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="./../../assets/images/favicon.ico" type="image/x-icon">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Left Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">MINDLEY</div>
+           <button title="Home" onclick="">Home</button>
+           <button>Chatbot</button>
+           <button>Peers</button>
+           <button>Resources</button>
+            <div class="logout">
+             <button>Logout</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="Search here..." class="search-bar">
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Large Box -->
+                <div class="content-box large-box">
+                    <!-- Content for large box goes here -->
+                </div>
+
+                <!-- Two Medium Boxes -->
+                <div class="content-box medium-box">
+                    <!-- Content for medium box 1 goes here -->
+                </div>
+                <div class="content-box medium-box">
+                    <!-- Content for medium box 2 goes here -->
+                </div>
+
+                <!-- Bottom Long Box -->
+                <div class="content-box long-box">
+                    <!-- Content for long box goes here -->
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
