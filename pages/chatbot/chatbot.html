@@ -16,16 +16,16 @@
     <nav class="side-bar">
         <header>
             <div class="image-text">
-                <span class="img">
-                    <img src="./assets/ex-logo.jpeg" alt="logo">
-                </span>
+                <div class="img">
+                    <img src="./../../assets/images/ex-logo.jpeg" alt="logo">
+                </div>
 
                 <div class="text header-text">
-                    <span class="name">Name</span>
+                    <span class="name">Mindly <i class='bx bx-arrow-right-circle toggle'></i></span>
+                    
                 </div>
             </div>
 
-            <i class='bx bx-arrow-right-circle toggle'  ></i>  
         </header>
 
         <div class="menu-bar">
@@ -85,16 +85,14 @@
             </div>
         </div>
     
-    <script type="module" src = "chatbot.js"></script>
+    <script type="module" src = "./chatbot.js"></script>
     <script>
         const menuItems = document.querySelectorAll('.nav-link');
 
         menuItems.forEach(item => {
             item.addEventListener('click', () => {
-                // Remove active from all
                 menuItems.forEach(i => i.classList.remove('active'));
-                
-                // Add active to the clicked item
+
                 item.classList.add('active');
             });
         });

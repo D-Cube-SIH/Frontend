@@ -36,7 +36,6 @@ body{
 .side-bar .text{
   font-size: 16px;
   font-weight: 500;
-
 }
 
 .side-bar .img{
@@ -60,7 +59,6 @@ body{
   border-radius: 10px;
   left: 10px;
   padding: 20px;
-
 }
 
 .side-bar header .image-text{
@@ -98,7 +96,7 @@ header .image-text .header-text{
 
 .side-bar li{
   height: 50px;
-  margin-top: 60px;
+  margin-top: 10px;
   list-style: none;
   display: flex;
   align-items: center;

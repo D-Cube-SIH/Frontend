@@ -4,78 +4,151 @@
     box-sizing: border-box;
 }
 
+:root {
+    --body-color: white;
+    --sidebar-color: #fff;
+    --primary-color: #8ACBF5;
+    --primary-color-light: white;
+    --toggle-color: #8ACBF5;
+    --text-color: grey;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
 }
 
-.container {
+.side-bar header {
+    position: relative;
+}
+
+.side-bar .text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.side-bar .img {
+    min-width: 60px;
     display: flex;
-    min-height: 100vh;
+    align-items: center;
+}
+
+.side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: #E9E9E9;
+    transition: var(--tran-03);
+}
+
+.side-bar .image-text .img img {
+    width: 100px;
+    border-radius: 10px;
+    left: 10px;
+    padding: 20px;
+}
+
+.side-bar header .image-text {
+    display: flex;
+    align-items: center;
 
 }
 
-/* Sidebar Styles */
-.sidebar {
-    width: 200px;
-    background-color: white;
-    padding: 20px;
+header .image-text .header-text {
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
-.sidebar button{
-    padding: 10px 35px ;
-    margin-bottom: 10px;
-    border-radius: 50px;
-    background:transparent;
+.header-text .name {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.side-bar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    background: var(--toggle-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    border: 2px solid #59728c;
+    color: white;
+    font-size: 25px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.nav-menu {
+.side-bar li {
+    height: 50px;
+    margin-top: 10px;
     list-style: none;
-    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
-.nav-menu li {
-    margin-bottom: 15px;
+.side-bar li .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 25px;
 }
 
-.nav-link {
+.side-bar li .icon,
+.side-bar li .text {
+    color: #000;
+    transition: var(--tran-03);
+}
+
+.side-bar li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: #666;
-    font-size: 16px;
-    padding: 8px 15px;
-    border-radius: 20px;
-    display: block;
-    transition: all 0.3s ease;
+    border-radius: 30px;
+    transition: var(--tran-04);
 }
 
-.nav-link:hover {
-    background-color: #e3f2fd;
-    color: #1976d2;
+.side-bar li a:hover {
+    background: var(--primary-color);
+}
+
+.side-bar li a:hover .icon,
+.side-bar li a:hover .text ,
+.side-bar .active a .icon ,
+.side-bar .active a .text 
+{
+    color: var(--sidebar-color);
+}
+
+.menu-bar .bottom-content .logout {
+    position: relative;
+    margin-top: 100px;
 }
 
 .nav-link.active {
-    background-color: #90caf9;
-    color: white;
+    border-radius: 30px;
+    background: var(--primary-color);
+    color: #fff !important;
 }
 
-.logout {
-    margin-top: auto;
+.side-bar .toggle:hover {
+    color: #000;
 }
 
-/* Main Content Styles */
 .main-content {
     flex: 1;
     padding: 20px;
@@ -83,11 +156,23 @@ body {
     flex-direction: column;
 }
 
+.collapsed{
+    transition: var(--tran-03);
+    transform: translate(-110%);
+}
+
 /* Search Bar Styles */
-.search-container {
+.header {
     margin-bottom: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+}
+
+.header img{
+    width: 30px;
+    height: 30px;
+    fill: #000;
+    cursor: pointer;
 }
 
 .search-bar {
@@ -152,7 +237,7 @@ body {
     .container {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         flex-direction: row;
@@ -160,30 +245,30 @@ body {
         align-items: center;
         padding: 10px 20px;
     }
-    
+
     .nav-menu {
         display: flex;
         gap: 10px;
     }
-    
+
     .nav-menu li {
         margin-bottom: 0;
     }
-    
+
     .logout {
         margin-top: 0;
     }
-    
+
     .search-bar {
         width: 100%;
         max-width: 400px;
     }
-    
+
     .content-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
     }
-    
+
     .large-box,
     .medium-box:nth-of-type(2),
     .medium-box:nth-of-type(3),

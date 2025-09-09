@@ -1,53 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Left Sidebar -->
-        <nav class="sidebar">
-            <div class="logo">MINDLEY</div>
-           <button title="Home" onclick="">Home</button>
-           <button>Chatbot</button>
-           <button>Peers</button>
-           <button>Resources</button>
-            <div class="logout">
-             <button>Logout</button>
-            </div>
-        </nav>
 
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <!-- Search Bar -->
-            <div class="search-container">
-                <input type="text" placeholder="Search here..." class="search-bar">
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="./style.css">
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+        <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
 
-            <!-- Content Grid -->
-            <div class="content-grid">
-                <!-- Large Box -->
-                <div class="content-box large-box">
-                    <!-- Content for large box goes here -->
+    <body>
+        <div class="container">
+            <nav class="side-bar collapsed">
+                <header>
+                    <div class="image-text">
+                        <div class="img">
+                            <img src="./assets/images/ex-logo.jpeg" alt="logo">
+                        </div>
+
+                        <div class="text header-text">
+                            <span class="name">Mindly <i class='bx bx-arrow-right-circle toggle'></i></span>
+
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="menu-bar">
+                    <div class="menu">
+                        <ul class="menu-links">
+                            <li class="nav-link  active">
+                                <a href="#">
+                                    <i class='bx bx-home-alt-2 icon'></i>
+                                    <span class="text nav-text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx  bx-message-rounded-dots icon'></i>
+                                    <span class="text nav-text">Chatbot</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-people-diversity icon'></i>
+                                    <span class="text nav-text">Peers</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">
+                                    <i class='bx bx-captions icon'></i>
+                                    <span class="text nav-text">Resources</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bottom-content">
+                        <li class="logout">
+                            <a href="#">
+                                <i class='bx  bx-running icon'></i>
+                                <span class="text nav-text">Logout</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-content">
+                <div class="header">
+                    <img title="Open Menu" src="./assets/images/menu_open_40dp_000000_FILL0_wght400_GRAD0_opsz40.svg" alt="menu" class="menu-icon">
                 </div>
 
-                <!-- Two Medium Boxes -->
-                <div class="content-box medium-box">
-                    <!-- Content for medium box 1 goes here -->
-                </div>
-                <div class="content-box medium-box">
-                    <!-- Content for medium box 2 goes here -->
-                </div>
+                <div class="content-grid">
+                    <div class="content-box large-box">
+                    </div>
 
-                <!-- Bottom Long Box -->
-                <div class="content-box long-box">
-                    <!-- Content for long box goes here -->
+                    <div class="content-box medium-box">
+                    </div>
+                    <div class="content-box medium-box">
+                    </div>
+
+                    <div class="content-box long-box">
+                    </div>
                 </div>
-            </div>
-        </main>
-    </div>
-</body>
+            </main>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggle = document.querySelector('.toggle');
+                const sideBar = document.querySelector('.side-bar');
+                const menuIcon = document.querySelector('.menu-icon');
+                toggle.addEventListener('click', function () {
+                    sideBar.classList.toggle('collapsed');
+                });
+
+                menuIcon.addEventListener('click', function () {
+                    sideBar.classList.toggle('collapsed');
+                });
+            });
+        </script>
+    </body>
+
 </html>
