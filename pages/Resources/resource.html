@@ -1,139 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mental Health Resources</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #e6f2ff, #f7fbff);
-      color: #333;
-      display: flex;
-    }
 
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background: #0059b3;
-      color: white;
-      height: 100vh;
-      padding-top: 30px;
-      position: fixed;
-      top: 0;
-      left: 0;
-    }
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Mental Health Resources</title>
+          <style>
+               body {
+                    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background: linear-gradient(to bottom right, #e6f2ff, #f7fbff);
+                    color: #333;
+                    display: flex;
+               }
 
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 22px;
-    }
+               /* Sidebar */
+               .sidebar {
+                    width: 220px;
+                    background: #0059b3;
+                    color: white;
+                    height: 100vh;
+                    padding-top: 30px;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+               }
 
-    .sidebar a {
-      display: block;
-      padding: 15px 20px;
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      transition: background 0.3s ease;
-    }
+               .sidebar h2 {
+                    text-align: center;
+                    margin-bottom: 30px;
+                    font-size: 22px;
+               }
 
-    .sidebar a:hover {
-      background: #0073e6;
-      border-radius: 10px;
-    }
+               .sidebar a {
+                    display: block;
+                    padding: 15px 20px;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 18px;
+                    transition: background 0.3s ease;
+               }
 
-    /* Main content */
-    .content {
-      margin-left: 240px;
-      padding: 40px;
-      flex: 1;
-    }
+               .sidebar a:hover {
+                    background: #0073e6;
+                    border-radius: 10px;
+               }
 
-    .resources {
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 50, 0.1);
-      padding: 30px;
-      animation: fadeIn 1s ease-in-out;
-      max-width: 800px;
-      margin: auto;
-    }
+               /* Main content */
+               .content {
+                    margin-left: 240px;
+                    padding: 40px;
+                    flex: 1;
+               }
 
-    .resources h2 {
-      text-align: center;
-      color: #0059b3;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+               .resources {
+                    background: #ffffff;
+                    border-radius: 20px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 50, 0.1);
+                    padding: 30px;
+                    animation: fadeIn 1s ease-in-out;
+                    max-width: 800px;
+                    margin: auto;
+               }
 
-    .resources ul {
-      list-style: none;
-      padding: 0;
-    }
+               .resources h2 {
+                    text-align: center;
+                    color: #0059b3;
+                    font-size: 28px;
+                    margin-bottom: 20px;
+               }
 
-    .resources li {
-      background: #f0f8ff;
-      margin: 12px 0;
-      padding: 14px 18px;
-      border-radius: 12px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+               .resources ul {
+                    list-style: none;
+                    padding: 0;
+               }
 
-    .resources li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0, 0, 50, 0.15);
-      background: #e0f0ff;
-    }
+               .resources li {
+                    background: #f0f8ff;
+                    margin: 12px 0;
+                    padding: 14px 18px;
+                    border-radius: 12px;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+               }
 
-    .resources a {
-      text-decoration: none;
-      color: #004080;
-      font-weight: 500;
-      font-size: 18px;
-      display: block;
-    }
+               .resources li:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 50, 0.15);
+                    background: #e0f0ff;
+               }
 
-    .resources a:hover {
-      color: #0080ff;
-    }
+               .resources a {
+                    text-decoration: none;
+                    color: #004080;
+                    font-weight: 500;
+                    font-size: 18px;
+                    display: block;
+               }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>🌿 Menu</h2>
-    <a href="home.html">🏠 Home</a>
-    <a href="chatbot.html">🤖 Chatbot</a>
-    <a href="peers.html">👥 Peers</a>
-    <a href="resources.html"><b>📘 Resources</b></a>
-  </div>
+               .resources a:hover {
+                    color: #0080ff;
+               }
 
-  <!-- Main Content -->
-  <div class="content">
-    <div class="resources">
-      <h2>🌸 Mental Health Resources 🌸</h2>
-      <ul>
-        <li><a href="https://www.who.int/health-topics/mental-health" target="_blank">World Health Organization – Mental Health</a></li>
-        <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov (US Government)</a></li>
-        <li><a href="https://www.nimh.nih.gov/health/topics" target="_blank">National Institute of Mental Health (NIMH)</a></li>
-        <li><a href="https://www.mind.org.uk/" target="_blank">Mind – Mental Health Charity (UK)</a></li>
-        <li><a href="https://www.thelivelovelaughfoundation.org/" target="_blank">Live Love Laugh (India – Deepika Padukone Foundation)</a></li>
-        <li><a href="http://www.roshnihyd.org/" target="_blank">Roshni Helpline (India) – 24/7 emotional support</a></li>
-        <li><a href="http://www.aasra.info/" target="_blank">AASRA (India) – Suicide prevention helpline</a></li>
-        <li><a href="https://www.betterhelp.com/" target="_blank">BetterHelp – Online Therapy</a></li>
-        <li><a href="https://www.talkspace.com/" target="_blank">Talkspace – Online Counseling</a></li>
-        <li><a href="https://www.ted.com/topics/mental+health" target="_blank">TED Talks on Mental Health</a></li>
-      </ul>
-    </div>
-  </div>
-</body>
+               @keyframes fadeIn {
+                    from {
+                         opacity: 0;
+                         transform: translateY(20px);
+                    }
+
+                    to {
+                         opacity: 1;
+                         transform: translateY(0);
+                    }
+               }
+          </style>
+     </head>
+
+     <body>
+          <!-- Sidebar -->
+          <div class="sidebar">
+               <h2>🌿 Menu</h2>
+               <a href="./../../index.html">📊 Dashboard</a>
+               <a href="./../chatbot/chatbot.html">🤖 Chatbot</a>
+               <a href="./../peer/peer.html">👥 Peers</a>
+               <a href="./resource.html"><b>📘 Resources</b></a>
+          </div>
+
+          <!-- Main Content -->
+          <div class="content">
+               <div class="resources">
+                    <h2>Mental Health Resources</h2>
+                    <ul>
+                         <li><a href="https://www.who.int/health-topics/mental-health" target="_blank">World Health
+                                   Organization - Mental Health</a></li>
+                         <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov (US
+                                   Government)</a></li>
+                         <li><a href="https://www.nimh.nih.gov/health/topics" target="_blank">National Institute of
+                                   Mental Health (NIMH)</a></li>
+                         <li><a href="https://www.mind.org.uk/" target="_blank">Mind - Mental Health Charity (UK)</a>
+                         </li>
+                         <li><a href="https://www.thelivelovelaughfoundation.org/" target="_blank">Live Love Laugh
+                                   (India – Deepika Padukone Foundation)</a></li>
+                         <li><a href="http://www.roshnihyd.org/" target="_blank">Roshni Helpline (India) - 24/7
+                                   emotional support</a></li>
+                         <li><a href="http://www.aasra.info/" target="_blank">AASRA (India) - Suicide prevention
+                                   helpline</a></li>
+                         <li><a href="https://www.betterhelp.com/" target="_blank">BetterHelp - Online Therapy</a></li>
+                         <li><a href="https://www.talkspace.com/" target="_blank">Talkspace - Online Counseling</a></li>
+                         <li><a href="https://www.ted.com/topics/mental+health" target="_blank">TED Talks on Mental
+                                   Health</a></li>
+                    </ul>
+               </div>
+          </div>
+     </body>
+
 </html>
