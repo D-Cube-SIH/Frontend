@@ -5,6 +5,10 @@
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Mental Health Resources</title>
+          <link rel="stylesheet" href="./resources.css">
+          <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+          <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+          <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
           <style>
                body {
                     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -15,41 +19,9 @@
                     display: flex;
                }
 
-               /* Sidebar */
-               .sidebar {
-                    width: 220px;
-                    background: #0059b3;
-                    color: white;
-                    height: 100vh;
-                    padding-top: 30px;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-               }
-
-               .sidebar h2 {
-                    text-align: center;
-                    margin-bottom: 30px;
-                    font-size: 22px;
-               }
-
-               .sidebar a {
-                    display: block;
-                    padding: 15px 20px;
-                    text-decoration: none;
-                    color: white;
-                    font-size: 18px;
-                    transition: background 0.3s ease;
-               }
-
-               .sidebar a:hover {
-                    background: #0073e6;
-                    border-radius: 10px;
-               }
-
                /* Main content */
                .content {
-                    margin-left: 240px;
+                    margin-left: 0;
                     padding: 40px;
                     flex: 1;
                }
@@ -117,18 +89,66 @@
      </head>
 
      <body>
-          <!-- Sidebar -->
-          <div class="sidebar">
-               <h2>🌿 Menu</h2>
-               <a href="./../../index.html">📊 Dashboard</a>
-               <a href="./../chatbot/chatbot.html">🤖 Chatbot</a>
-               <a href="./../peer/peer.html">👥 Peers</a>
-               <a href="./resource.html"><b>📘 Resources</b></a>
-          </div>
+          <nav class="side-bar collapsed">
+               <header>
+                    <div class="image-text">
+                         <div class="img">
+                              <img src="./../../assets/images/ex-logo.jpeg" alt="logo">
+                         </div>
+
+                         <div class="text header-text">
+                              <span class="name">Mindly <div class="toggle"><i class='bx bx-arrow-right-circle toggle-img'></i></div></span>
+                         </div>
+                    </div>
+
+               </header>
+
+               <div class="menu-bar">
+                    <div class="menu">
+                         <ul class="menu-links">
+                              <li class="nav-link  active">
+                                   <a href="">
+                                        <i class='bx bx-home-alt-2 icon'></i>
+                                        <span class="text nav-text">Dashboard</span>
+                                   </a>
+                              </li>
+                              <li class="nav-link">
+                                   <a href="./../chatbot/chatbot.html">
+                                        <i class='bx  bx-message-rounded-dots icon'></i>
+                                        <span class="text nav-text">Chatbot</span>
+                                   </a>
+                              </li>
+                              <li class="nav-link">
+                                   <a href="./../peer/peer.html">
+                                        <i class='bx bx-people-diversity icon'></i>
+                                        <span class="text nav-text">Peers</span>
+                                   </a>
+                              </li>
+                              <li class="nav-link">
+                                   <a href="./../Resources/resource.html">
+                                        <i class='bx bx-captions icon'></i>
+                                        <span class="text nav-text">Resources</span>
+                                   </a>
+                              </li>
+                         </ul>
+                    </div>
+
+                    <div class="bottom-content">
+                         <li class="logout">
+                              <a href="./pages/Login/loginpage.html">
+                                   <i class='bx  bx-running icon'></i>
+                                   <span class="text nav-text">Logout</span>
+                              </a>
+                         </li>
+                    </div>
+               </div>
+          </nav>
 
           <!-- Main Content -->
           <div class="content">
                <div class="resources">
+                    <img src="./../../assets/images/menu_open_40dp_000000_FILL0_wght400_GRAD0_opsz40.svg" alt=""
+                         style="cursor: pointer;"  class="menu-icon">
                     <h2>Mental Health Resources</h2>
                     <ul>
                          <li><a href="https://www.who.int/health-topics/mental-health" target="_blank">World Health
@@ -152,6 +172,21 @@
                     </ul>
                </div>
           </div>
+          <script>
+               document.addEventListener('DOMContentLoaded', function () {
+                    const toggle = document.querySelector('.toggle');
+                    const sideBar = document.querySelector('.side-bar');
+                    const menuIcon = document.querySelector('.menu-icon');
+                    toggle.addEventListener('click', function () {
+                         sideBar.classList.toggle('collapsed');
+                    });
+                    
+                    
+                    menuIcon.addEventListener('click', function () {
+                         sideBar.classList.toggle('collapsed');
+                    });
+               });
+          </script>
      </body>
 
 </html>

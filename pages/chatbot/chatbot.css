@@ -52,6 +52,7 @@ body{
   width:250px;
   padding: 10px 14px;
   background: #E9E9E9;
+  transform: var(--tran-03);
 }
 
 .side-bar .image-text .img img{
@@ -79,7 +80,6 @@ header .image-text .header-text{
 
 .side-bar header .toggle{
   position: absolute;
-  top: 50%;
   right: -30px;
   transform: translateY(-50%);
   height: 30px;
@@ -92,6 +92,14 @@ header .image-text .header-text{
   cursor: pointer;
   color: white;
   font-size: 25px;
+}
+
+.side-bar header .toggle .toggle-img{
+     transition: var(--tran-03);
+}
+.side-bar header .toggle:hover .toggle-img{
+     margin-bottom: 5px;
+     transform: rotate(180deg);
 }
 
 .side-bar li{
@@ -131,7 +139,9 @@ header .image-text .header-text{
 }
 
 .side-bar li a:hover .icon,
-.side-bar li a:hover .text{
+.side-bar li a:hover .text ,
+.side-bar .active a .icon ,
+.side-bar .active a .text {
   color:var(--sidebar-color);
 }
 
@@ -145,13 +155,14 @@ header .image-text .header-text{
   background: var(--primary-color);
 }
 
-.side-bar .toggle:hover{
-  color:#000;
-}
+.collapsed{
+    transition: var(--tran-03);
+    transform: translate(-110%);
+} 
 
 .chat-container {
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     background: transparent;
 }
 
@@ -162,12 +173,14 @@ header .image-text .header-text{
     left: 300px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .input-holder .input-box{
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    /* margin: 0 auto; */
     display: flex;
     align-items: center;
     background-color: #fff;
