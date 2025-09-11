@@ -157,15 +157,15 @@ header .image-text .header-text{
 .content {
   display: flex;
   flex-direction: column;
-  margin-left: 250px;  /* same as sidebar width */
+  margin-left: 250px;
   margin-top: 2vh;
   min-height: 90vh;
   padding: 20px;
 }
 
 .cards img {
-    width: 100px;           /* base size */
-    height: auto;           /* keeps aspect ratio */
+    width: 100px;
+    height: auto;
     border-radius: 50%;
     margin-right: 20px;
 }
@@ -176,13 +176,13 @@ header .image-text .header-text{
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 10px;              /* spacing between cards */
+    gap: 10px;
 }
 
 .content .cards .card-1 {
-    flex: 1 1 300px;        /* grow/shrink, min width 300px */
+    flex: 1 1 300px;
     width: 600px;  
-    height: 180px;;     /* limit card width */
+    height: 180px;
     background: white;
     border-radius: 20px;
     display: flex;
