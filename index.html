@@ -1,113 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+  <nav class="side-bar">
+        <header>
+            <div class="image-text">
+                <span class="img">
+                    <img src="logo.jpg" alt="logo">
+                </span>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Website</title>
-        <link rel="stylesheet" href="./style.css">
-        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-        <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    </head>
-
-    <body>
-        <div class="container">
-            <nav class="side-bar collapsed">
-                <header>
-                    <div class="image-text">
-                        <div class="img">
-                            <img src="./assets/images/ex-logo.jpeg" alt="logo">
-                        </div>
-
-                        <div class="text header-text">
-                            <span class="name">Mindly <div class="toggle"><i class='bx bx-arrow-right-circle toggle-img'></i></div></span>
-                        </div>
-                    </div>
-
-                </header>
-
-                <div class="menu-bar">
-                    <div class="menu">
-                        <ul class="menu-links">
-                            <li class="nav-link  active">
-                                <a href="">
-                                    <i class='bx bx-home-alt-2 icon'></i>
-                                    <span class="text nav-text">Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="./pages/chatbot/chatbot.html">
-                                    <i class='bx  bx-message-rounded-dots icon'></i>
-                                    <span class="text nav-text">Chatbot</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="./pages/peer/peer.html">
-                                    <i class='bx bx-people-diversity icon'></i>
-                                    <span class="text nav-text">Peers</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="./pages/Resources/resource.html">
-                                    <i class='bx bx-captions icon'></i>
-                                    <span class="text nav-text">Resources</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="bottom-content">
-                        <li class="logout">
-                            <a href="./pages/Login/loginpage.html">
-                                <i class='bx  bx-running icon'></i>
-                                <span class="text nav-text">Logout</span>
-                            </a>
-                        </li>
-                    </div>
+                <div class="text header-text">
+                    <span class="name">Mindley</span>
                 </div>
-            </nav>
+            </div>
 
-            <main class="main-content">
-                <div class="header">
-                    <img title="Open Menu" src="./assets/images/menu_open_40dp_000000_FILL0_wght400_GRAD0_opsz40.svg"
-                        alt="menu" class="menu-icon">
-                </div>
+            <i class='bx  bx-arrow-right-circle toggle'  ></i>  
+        </header>
 
-                <div class="body-content">
-                    <div class="info-container">
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link active">
+                        <a href = "#">
+                            <i class='bx  bx-home-alt-2 icon'  ></i> 
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-message-circle-dots-2 icon'  ></i> 
+                            <span class="text nav-text">Chatbot</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-people-diversity icon'  ></i> 
+                            <span class="text nav-text">Peers</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-captions icon'  ></i>  
+                            <span class="text nav-text">Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-                    </div>
-
-                    <div class="content-grid">
-                        <div class="content-box large-box">
-                        </div>
-
-                        <div class="content-box medium-box">
-                        </div>
-                        <div class="content-box medium-box">
-                        </div>
-
-                        <div class="content-box long-box">
-                        </div>
-                    </div>
-                </div>
-            </main>
+            <div class="bottom-content">
+                <li class="logout">
+                    <a href = "#">
+                        <i class='bx  bx-running icon'  ></i>   
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const toggle = document.querySelector('.toggle');
-                const sideBar = document.querySelector('.side-bar');
-                const menuIcon = document.querySelector('.menu-icon');
-                toggle.addEventListener('click', function () {
-                    sideBar.classList.toggle('collapsed');
-                });
+    </nav>
 
-                menuIcon.addEventListener('click', function () {
-                    sideBar.classList.toggle('collapsed');
-                });
+
+    <div class="content">
+        <div class="cards">
+            <div class="card-1">
+                <div class="box">
+                    <h1>Welcome</h1>
+                    <h3>USER_NAME</h3>
+                    <button class="profile-btn">
+                        Edit profile
+                    </button>
+                </div>
+                    <div class="icon-case">
+                        <img src="profile.png" alt="Profile">
+                    </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="Performance-card">
+                <div class="box">
+                    <h1>Performance</h1>
+                    <h3>Click here to view your Performance</h3>
+                </div>
+                <button class="performance-view">
+                    Click to view
+                </button>
+            </div>
+
+            <div class="assessment-card">
+                <div class="box">
+                    <h1>Take Health Assessment</h1>
+                    <button class="assessment-btn">Take Test</button>
+                </div>
+            </div>
+            <div class="care-card">
+                <div class="box">
+                    <h1>Care Points</h1>
+                    <button class="care-points">Click to view</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="graph-card">
+                <div>
+                    <canvas id="myChart" width="1000" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="home.js"></script>
+    <script>
+        const menuItems = document.querySelectorAll('.nav-link');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active from all
+                menuItems.forEach(i => i.classList.remove('active'));
+                
+                // Add active to the clicked item
+                item.classList.add('active');
             });
-        </script>
-    </body>
+        });
+    </script>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+  <nav class="side-bar">
+        <header>
+            <div class="image-text">
+                <span class="img">
+                    <img src="logo.jpg" alt="logo">
+                </span>
 
+                <div class="text header-text">
+                    <span class="name">Mindley</span>
+                </div>
+            </div>
+
+            <i class='bx  bx-arrow-right-circle toggle'  ></i>  
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link active">
+                        <a href = "#">
+                            <i class='bx  bx-home-alt-2 icon'  ></i> 
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-message-circle-dots-2 icon'  ></i> 
+                            <span class="text nav-text">Chatbot</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-people-diversity icon'  ></i> 
+                            <span class="text nav-text">Peers</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-captions icon'  ></i>  
+                            <span class="text nav-text">Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="logout">
+                    <a href = "#">
+                        <i class='bx  bx-running icon'  ></i>   
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="cards">
+            <div class="card-1">
+                <div class="box">
+                    <h1>Welcome</h1>
+                    <h3>USER_NAME</h3>
+                    <button class="profile-btn">
+                        Edit profile
+                    </button>
+                </div>
+                    <div class="icon-case">
+                        <img src="profile.png" alt="Profile">
+                    </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="Performance-card">
+                <div class="box">
+                    <h1>Performance</h1>
+                    <h3>Click here to view your Performance</h3>
+                </div>
+                <button class="performance-view">
+                    Click to view
+                </button>
+            </div>
+
+            <div class="assessment-card">
+                <div class="box">
+                    <h1>Take Health Assessment</h1>
+                    <button class="assessment-btn">Take Test</button>
+                </div>
+            </div>
+            <div class="care-card">
+                <div class="box">
+                    <h1>Care Points</h1>
+                    <button class="care-points">Click to view</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="graph-card">
+                <div>
+                    <canvas id="myChart" width="1000" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="home.js"></script>
+    <script>
+        const menuItems = document.querySelectorAll('.nav-link');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active from all
+                menuItems.forEach(i => i.classList.remove('active'));
+                
+                // Add active to the clicked item
+                item.classList.add('active');
+            });
+        });
+    </script>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+  <nav class="side-bar">
+        <header>
+            <div class="image-text">
+                <span class="img">
+                    <img src="logo.jpg" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Mindley</span>
+                </div>
+            </div>
+
+            <i class='bx  bx-arrow-right-circle toggle'  ></i>  
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link active">
+                        <a href = "#">
+                            <i class='bx  bx-home-alt-2 icon'  ></i> 
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-message-circle-dots-2 icon'  ></i> 
+                            <span class="text nav-text">Chatbot</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-people-diversity icon'  ></i> 
+                            <span class="text nav-text">Peers</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-captions icon'  ></i>  
+                            <span class="text nav-text">Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="logout">
+                    <a href = "#">
+                        <i class='bx  bx-running icon'  ></i>   
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="cards">
+            <div class="card-1">
+                <div class="box">
+                    <h1>Welcome</h1>
+                    <h3>USER_NAME</h3>
+                    <button class="profile-btn">
+                        Edit profile
+                    </button>
+                </div>
+                    <div class="icon-case">
+                        <img src="profile.png" alt="Profile">
+                    </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="Performance-card">
+                <div class="box">
+                    <h1>Performance</h1>
+                    <h3>Click here to view your Performance</h3>
+                </div>
+                <button class="performance-view">
+                    Click to view
+                </button>
+            </div>
+
+            <div class="assessment-card">
+                <div class="box">
+                    <h1>Take Health Assessment</h1>
+                    <button class="assessment-btn">Take Test</button>
+                </div>
+            </div>
+            <div class="care-card">
+                <div class="box">
+                    <h1>Care Points</h1>
+                    <button class="care-points">Click to view</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="graph-card">
+                <div>
+                    <canvas id="myChart" width="1000" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="home.js"></script>
+    <script>
+        const menuItems = document.querySelectorAll('.nav-link');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active from all
+                menuItems.forEach(i => i.classList.remove('active'));
+                
+                // Add active to the clicked item
+                item.classList.add('active');
+            });
+        });
+    </script>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+  <nav class="side-bar">
+        <header>
+            <div class="image-text">
+                <span class="img">
+                    <img src="logo.jpg" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Mindley</span>
+                </div>
+            </div>
+
+            <i class='bx  bx-arrow-right-circle toggle'  ></i>  
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link active">
+                        <a href = "#">
+                            <i class='bx  bx-home-alt-2 icon'  ></i> 
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-message-circle-dots-2 icon'  ></i> 
+                            <span class="text nav-text">Chatbot</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-people-diversity icon'  ></i> 
+                            <span class="text nav-text">Peers</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href = "#">
+                            <i class='bx  bx-captions icon'  ></i>  
+                            <span class="text nav-text">Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="logout">
+                    <a href = "#">
+                        <i class='bx  bx-running icon'  ></i>   
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="cards">
+            <div class="card-1">
+                <div class="box">
+                    <h1>Welcome</h1>
+                    <h3>USER_NAME</h3>
+                    <button class="profile-btn">
+                        Edit profile
+                    </button>
+                </div>
+                    <div class="icon-case">
+                        <img src="profile.png" alt="Profile">
+                    </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="Performance-card">
+                <div class="box">
+                    <h1>Performance</h1>
+                    <h3>Click here to view your Performance</h3>
+                </div>
+                <button class="performance-view">
+                    Click to view
+                </button>
+            </div>
+
+            <div class="assessment-card">
+                <div class="box">
+                    <h1>Take Health Assessment</h1>
+                    <button class="assessment-btn">Take Test</button>
+                </div>
+            </div>
+            <div class="care-card">
+                <div class="box">
+                    <h1>Care Points</h1>
+                    <button class="care-points">Click to view</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="graph-card">
+                <div>
+                    <canvas id="myChart" width="1000" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="home.js"></script>
+    <script>
+        const menuItems = document.querySelectorAll('.nav-link');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active from all
+                menuItems.forEach(i => i.classList.remove('active'));
+                
+                // Add active to the clicked item
+                item.classList.add('active');
+            });
+        });
+    </script>
+    
+</body>
 </html>
