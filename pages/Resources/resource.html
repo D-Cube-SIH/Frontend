@@ -48,7 +48,7 @@
                     padding: 0;
                }
 
-               .resources li {
+               .resources a {
                     background: #f0f8ff;
                     margin: 12px 0;
                     padding: 14px 18px;
@@ -56,7 +56,7 @@
                     transition: transform 0.2s ease, box-shadow 0.2s ease;
                }
 
-               .resources li:hover {
+               .resources a:hover {
                     transform: translateY(-3px);
                     box-shadow: 0 4px 12px rgba(0, 0, 50, 0.15);
                     background: #e0f0ff;
@@ -97,7 +97,8 @@
                          </div>
 
                          <div class="text header-text">
-                              <span class="name">Mindly <div class="toggle"><i class='bx bx-arrow-right-circle toggle-img'></i></div></span>
+                              <span class="name">Mindly <div class="toggle"><i
+                                             class='bx bx-arrow-right-circle toggle-img'></i></div></span>
                          </div>
                     </div>
 
@@ -148,27 +149,14 @@
           <div class="content">
                <div class="resources">
                     <img src="./../../assets/images/menu_open_40dp_000000_FILL0_wght400_GRAD0_opsz40.svg" alt=""
-                         style="cursor: pointer;"  class="menu-icon">
+                         style="cursor: pointer;" class="menu-icon">
                     <h2>Mental Health Resources</h2>
                     <ul>
-                         <li><a href="https://www.who.int/health-topics/mental-health" target="_blank">World Health
-                                   Organization - Mental Health</a></li>
-                         <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov (US
-                                   Government)</a></li>
-                         <li><a href="https://www.nimh.nih.gov/health/topics" target="_blank">National Institute of
-                                   Mental Health (NIMH)</a></li>
-                         <li><a href="https://www.mind.org.uk/" target="_blank">Mind - Mental Health Charity (UK)</a>
-                         </li>
-                         <li><a href="https://www.thelivelovelaughfoundation.org/" target="_blank">Live Love Laugh
-                                   (India – Deepika Padukone Foundation)</a></li>
-                         <li><a href="http://www.roshnihyd.org/" target="_blank">Roshni Helpline (India) - 24/7
-                                   emotional support</a></li>
-                         <li><a href="http://www.aasra.info/" target="_blank">AASRA (India) - Suicide prevention
-                                   helpline</a></li>
-                         <li><a href="https://www.betterhelp.com/" target="_blank">BetterHelp - Online Therapy</a></li>
-                         <li><a href="https://www.talkspace.com/" target="_blank">Talkspace - Online Counseling</a></li>
-                         <li><a href="https://www.ted.com/topics/mental+health" target="_blank">TED Talks on Mental
-                                   Health</a></li>
+                         <li><a href="https://youtube.com/embed/DxIDKZHW3-E" target="_blank">We All Have Mental Health</a></li>
+                         <li><a href="https://youtube.com/embed/b_ZFjw-eEGo" target="_blank">Mental Health Matters: 30-Minute Daily Self-Care Practices</a></li>
+                         <li><a href="https://youtube.com/embed/KoFSKuDCXbw" target="_blank">Improving Access to Mental Health Care: Five Key Approaches</a></li>
+                         <li><a href="https://youtube.com/embed/wJJEet3mXUg" target="_blank">Mental Health Basics: Take Care of Your Mind & Emotions</a></li>
+                         <li><a href="https://youtube.com/embed/G0zJGDokyWQ" target="_blank">The Truth About Mental Health: What Everyone Should Know</a></li>
                     </ul>
                </div>
           </div>
@@ -180,8 +168,8 @@
                     toggle.addEventListener('click', function () {
                          sideBar.classList.toggle('collapsed');
                     });
-                    
-                    
+
+
                     menuIcon.addEventListener('click', function () {
                          sideBar.classList.toggle('collapsed');
                     });

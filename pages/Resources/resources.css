@@ -65,9 +65,9 @@ header .image-text .header-text {
 }
 
 .side-bar header .toggle {
-     position: absolute;
-     top: 60px;
-     right: -15px;
+    position: absolute;
+    top: 40px;
+    right: -15px;
     transform: translateY(-50%);
     height: 30px;
     width: 30px;

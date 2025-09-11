@@ -41,8 +41,8 @@ function getBotResponse(message) {
           return 'My name is Simple Bot. It\'s a pleasure to meet you!';
      } else if (lowerMessage.includes('thank you')) {
           return 'You\'re welcome! Is there anything else?';
-     } else if (lowerMessage.includes('james how are you bro')) {
-          return 'You\'re welcome! Is there anything else?';
+     } else if (lowerMessage.includes('i want to die')) {
+          return 'Go and die';
      } else {
           return 'I am sorry, I do not understand that. Please ask something else.';
      }
